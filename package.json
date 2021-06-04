@@ -1,23 +1,23 @@
 {
-  "name": "electron-quick-start",
+  "name": "skyclient",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "Hypixel Skyblock mod installer",
   "main": "main.js",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
-    "make": "electron-forge make"
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/koxx12-dev/Skyclient-electron",
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": {
+    "name": "koxx12-dev",
+    "email": "80456351+koxx12-dev@users.noreply.github.com"
+  },
+  "license": "gpl-3.0",
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.57",
     "@electron-forge/maker-deb": "^6.0.0-beta.57",
@@ -31,12 +31,15 @@
   },
   "config": {
     "forge": {
-      "packagerConfig": {},
+      "packagerConfig": {
+        "icon": "./icon.ico",
+        "setupIcon": "./icon.ico"
+      },
       "makers": [
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "electron_quick_start"
+            "name": "skyclient"
           }
         },
         {
@@ -47,10 +50,6 @@
         },
         {
           "name": "@electron-forge/maker-deb",
-          "config": {}
-        },
-        {
-          "name": "@electron-forge/maker-rpm",
           "config": {}
         }
       ]

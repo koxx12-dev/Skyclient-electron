@@ -13,16 +13,22 @@ function httpGet(theUrl)
     return xmlHttp.responseText;
 }
 
+function openUrl(url) 
+{
+    window.openSite(url);
+}
+
 const jsonSettings = httpGet("https://raw.githubusercontent.com/nacrt/SkyblockClient-REPO/main/files/mods.json");
 const jsonParsed = JSON.parse(jsonSettings);
-
+openUrl("https://google.com")
 const Div = document.getElementsByClassName('testdiv')[0];
 
 for (var i = 0; i < jsonParsed.length; i++) {
     var val = jsonParsed[i]
     var tag = document.createElement('a');
     tag.innerHTML = val.id;
-    tag.setAttribute('href',"'"+val.url+"'");
+    //tag.setAttribute('href',"'"+val.url+"'");
+    tag.setAttribute('onclick',"openUrl(\""+val.url+"\")");
     Div.appendChild(tag);
     Div.appendChild(document.createElement('br'));
 }

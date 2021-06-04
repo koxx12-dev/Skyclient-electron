@@ -9,4 +9,10 @@ window.addEventListener('DOMContentLoaded', () => {
   for (const type of ['chrome', 'node', 'electron']) {
     replaceText(`${type}-version`, process.versions[type])
   }
+
 })
+
+window.openSite = function (url) {
+  require("electron").shell.openExternal(url);
+}
+
