@@ -10,7 +10,6 @@ jobs:
   buildlnx:
     name: Build linux
     runs-on: ubuntu-latest
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
     - uses: actions/checkout@v2
@@ -26,12 +25,11 @@ jobs:
       uses: actions/upload-artifact@v2.2.3
       with:
         name: compiled
-        path: out/*
+        path: out/make/*
         
   buildmac:
     name: Build Mac
     runs-on: macos-latest
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
     - uses: actions/checkout@v2
@@ -45,12 +43,11 @@ jobs:
       uses: actions/upload-artifact@v2.2.3
       with:
         name: compiled
-        path: out/*
+        path: out/make/*
         
   buildwin:
     name: Build windows
     runs-on: windows-latest
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
     - uses: actions/checkout@v2
@@ -64,4 +61,4 @@ jobs:
       uses: actions/upload-artifact@v2.2.3
       with:
         name: compiled
-        path: out/*
+        path: out/make/*
