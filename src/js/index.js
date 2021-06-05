@@ -20,7 +20,7 @@ function openUrl(url)
 
 const jsonSettings = httpGet("https://raw.githubusercontent.com/nacrt/SkyblockClient-REPO/main/files/mods.json");
 const jsonParsed = JSON.parse(jsonSettings);
-openUrl("https://google.com")
+
 const Div = document.getElementsByClassName('testdiv')[0];
 
 for (var i = 0; i < jsonParsed.length; i++) {

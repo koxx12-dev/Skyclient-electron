@@ -5,6 +5,10 @@ body {
     color: white;
 }
 
+a {
+    color: #58a6ff;
+}
+
 /* unvisited link */
 a:link {
     color: #58a6ff;
@@ -21,6 +25,7 @@ a:visited {
 a:hover {
     color: #58a6ff;
     text-decoration: underline;
+    cursor: pointer;
 }
   
   /* selected link */

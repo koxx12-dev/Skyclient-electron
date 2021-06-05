@@ -1,13 +1,11 @@
 {
-  "name": "skyclient",
+  "name": "Skyclient",
   "version": "1.0.0",
   "description": "Hypixel Skyblock mod installer",
   "main": "main.js",
   "scripts": {
     "start": "electron-forge start",
-    "package": "electron-forge package",
     "make": "electron-forge make",
-    "publish": "electron-forge publish",
     "lint": "echo \"No linting configured\""
   },
   "repository": "https://github.com/koxx12-dev/Skyclient-electron",
@@ -30,29 +28,6 @@
     "electron-squirrel-startup": "^1.0.0"
   },
   "config": {
-    "forge": {
-      "packagerConfig": {
-        "icon": "./icon.ico",
-        "setupIcon": "./icon.ico"
-      },
-      "makers": [
-        {
-          "name": "@electron-forge/maker-squirrel",
-          "config": {
-            "name": "skyclient"
-          }
-        },
-        {
-          "name": "@electron-forge/maker-zip",
-          "platforms": [
-            "darwin"
-          ]
-        },
-        {
-          "name": "@electron-forge/maker-deb",
-          "config": {}
-        }
-      ]
-    }
+    "forge": "forge.config.js"
   }
 }
