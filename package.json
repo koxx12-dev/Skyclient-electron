@@ -9,8 +9,7 @@
     "lint": "echo \"No linting configured\""
   },
   "repository": "https://github.com/koxx12-dev/Skyclient-electron",
-  "keywords": [
-  ],
+  "keywords": [],
   "author": {
     "name": "koxx12-dev",
     "email": "80456351+koxx12-dev@users.noreply.github.com"
@@ -19,7 +18,7 @@
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.57",
     "@electron-forge/maker-deb": "^6.0.0-beta.57",
-    "@electron-forge/maker-rpm": "^6.0.0-beta.57",
+    "@electron-forge/maker-dmg": "^6.0.0-beta.57",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.57",
     "@electron-forge/maker-zip": "^6.0.0-beta.57",
     "electron": "^13.0.1"

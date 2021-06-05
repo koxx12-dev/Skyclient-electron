@@ -6,6 +6,9 @@ module.exports = {
     },
     "makers": [
       {
+       "name": "@electron-forge/maker-zip",
+      },
+      {
         "name": "@electron-forge/maker-squirrel",
         "config": {
           "setupIcon": path.join(__dirname,"src","assets","img","icon.ico"),
@@ -14,14 +17,22 @@ module.exports = {
         }
       },
       {
-        "name": "@electron-forge/maker-zip",
-        "platforms": [
-          "darwin"
-        ]
+        "name": '@electron-forge/maker-dmg',
+        "config": {
+          "icon": path.join(__dirname,"src","assets","other","icon.icns"),
+          "name": "Skyclient"
+        }
       },
       {
         "name": "@electron-forge/maker-deb",
-        "config": {}
+        "config": { 
+          "options": {
+            "homepage": 'https://github.com/koxx12-dev/Skyclient-electron',
+            "genericName": "Skyclient",
+            "description": "Hypixel skyblock mod installer",
+            "icon": path.join(__dirname,"src","assets","img","icon.ico")
+         }
+        }
       }
     ]
   }
